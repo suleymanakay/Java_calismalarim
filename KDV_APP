@@ -8,8 +8,11 @@ public class Main {
         int a,b,c;
         System.out.println("Para_miktarı_giriniz: ");
         a=scanner.nextInt();
-        b=a+(a*18/100);
-        c=b-a;
+        if(a<1000)
+            b = a + (a * 18 / 100);
+        else
+            b=a+(a*8/100);
+             c=b-a;
         System.out.println("Bilgilendirme \n" +
                 "KDV siz Fiyat="+a+"\n"+
                 "KDV li Fiyat ="+b+"\n"+
