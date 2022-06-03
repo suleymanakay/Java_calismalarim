@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        int b,a;
+       double pi=3.14,c;
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Lütfe çember yarı çapını giriniz: ");
+        a=scanner.nextInt();
+        System.out.print("Lütfen merkez açısı ölçüsünü giriniz: ");
+        b=scanner.nextInt();
+        c=(pi*a*a*b)/360;
+        System.out.println("Daire dilimin alanı: "+c);
+
+    }
+}
