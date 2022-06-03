@@ -1,0 +1,45 @@
+package org.example;
+
+import java.util.Scanner;
+/*Eğer şifre yanlış ise kullanıcıya şifresini sıfırlayıp sıfırlamayacağını sorun,
+     eğer kullanıcı sıfırlamak isterse yeni girdiği şifrenin hatalı girdiği ve unuttuğu şifre ile aynı olmaması gerektiğini kontrol edip
+   , şifreler aynı ise ekrana "Şifre oluşturulamadı,
+   lütfen başka şifre giriniz." sorun yoksa "Şifre oluşturuldu" yazan programı yazınız.
+    */
+public class Main {
+    public static void main(String[] args) {
+        int yap;
+        int dogrusifre = 7526;
+        int yeni;
+        
+        Scanner doldur = new Scanner(System.in);
+        yap = doldur.nextInt();
+        System.out.println(yap);
+
+        if (yap == dogrusifre) {
+            System.out.println("sifreniz dogru");
+        } else if (yap != dogrusifre) {
+
+            System.out.println("sifreniz yanlış sıfırlamak ister misiniz?\n Evet ise 1 e hayır ise 2 ye basın");
+            int a = 1, b = 2, zero;
+
+            Scanner sıfırlama = new Scanner(System.in);
+            zero = sıfırlama.nextInt();
+
+            if (zero == 1) {
+                int olustur;
+                System.out.println("yeni sifrenizi giriniz: ");
+                Scanner input = new Scanner(System.in);
+                olustur = input.nextInt();
+                System.out.println(olustur);
+                if (olustur == yap) {
+                    System.out.println("aynısını yazdınız başka şifre giriniz.");
+                }
+                if (olustur != yap) {
+                    System.out.println("başarıyla yeni şifre oluşturdunuz.");
+
+                }
+            } else {
+                System.out.println("şifre oluşturmak istemediniz");
+            }
+        }}}
