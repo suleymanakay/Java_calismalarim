@@ -1,0 +1,14 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Double a,b,c;
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Katedilen mesafe(metre): ");
+        a=scanner.nextDouble();
+        b=a*2.20/1000;
+        System.out.println("Taksimetre tutarı:  "+b);
+    }
+}
