@@ -1,0 +1,23 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+    float a,b,c,d,e,f;
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Armut kaç kilo: ?  ");
+        a=scanner.nextFloat();
+        System.out.print("Elma kaç kilo: ?  ");
+        b=scanner.nextFloat();
+        System.out.print("Domates kaç kilo: ?  ");
+        c=scanner.nextFloat();
+        System.out.print("Muz kaç kilo: ?  ");
+        d=scanner.nextFloat();
+        System.out.print("Patlıcan kaç kilo: ?  ");
+        e=scanner.nextFloat();
+        f= (float) ((float)  (a*2.14/1)+ (b*3.67/1)+(c*1.11/1)+(d*0.95/1)+(e*5.0/1));
+        System.out.print("Toplam tutar: "  +f);
+
+    }
+}
