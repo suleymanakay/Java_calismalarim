@@ -1,0 +1,61 @@
+package org.example;
+
+import java.util.Scanner;
+/*
+ Java ile mesafeye ve şartlara göre uçak bileti fiyatı hesaplayan programı yapın.
+ Kullanıcıdan Mesafe (KM), yaşı ve yolculuk tipi (Tek Yön, Gidiş-Dönüş) bilgilerini alın.
+ Mesafe başına ücret 0,10 TL / km olarak alın. İlk olarak uçuşun toplam fiyatını hesaplayın
+ ve sonrasında ki koşullara göre müşteriye aşağıdaki indirimleri uygulayın ;
+
+Kullanıcıdan alınan değerler geçerli (mesafe ve yaş değerleri pozitif sayı, yolculuk tipi ise 1 veya 2) olmalıdır. Aksi takdirde kullanıcıya "Hatalı Veri Girdiniz !" şeklinde bir uyarı verilmelidir.
+Kişi 12 yaşından küçükse bilet fiyatı üzerinden %50 indirim uygulanır.
+Kişi 12-24 yaşları arasında ise bilet fiyatı üzerinden %10 indirim uygulanır.
+Kişi 65 yaşından büyük ise bilet fiyatı üzerinden %30 indirim uygulanır.
+Kişi "Yolculuk Tipini" gidiş dönüş seçmiş ise bilet fiyatı üzerinden %20 indirim uygulanır.
+
+ */
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int km,yas,a;
+        double top,x,k,m,y;
+        String yolculuk_tipi;
+        System.out.print("Uçak Bileti Servisine Hoşgeldiniz\nLütfen Katedeceğiniz mesafeyi(Km) giriniz: ");
+        km=scanner.nextInt();
+        if(km<0)
+            System.out.println("Geçersiz mesafe girdiniz.");
+        System.out.print("Lütfen yaş bilginizi giriniz: ");
+        yas=scanner.nextInt();
+        if(yas<0)
+            System.out.println("geçersiz yaş girdiniz.");
+
+        System.out.println("Lütfen tek yön veya gidiş-dönüş bilgisini giriniz: ");
+        yolculuk_tipi=scanner.nextLine();
+        top=km*10/100;
+        System.out.println("Yön bilgisi belirtiniz.\n Tek yönlü ise 1 basınız.\n gidiş-dönüş ise 2 basınız.");
+        a=scanner.nextInt();
+
+        if(yas<12) {
+            y = top * 50 / 100; //%50 indirim.
+            System.out.println("12 yaşından küçük olduğunuz için %50 indirim uygulandı.\nTolam bilet ücretiniz: "+y);
+        }
+        else if(yas<=12 || yas<=24) {
+            k = top * 90 / 100;
+            System.out.println("12-24 yaş aralığında olduğunuz için %10 indirim uygulandı.\nToplam bilet ücretiniz: "+k);
+        }
+        else if(yas>65) {
+            m = top * 70 / 100;
+            System.out.println("65 yaş üstü olduğunuz için %30 indirim uygulandı.\nToplam bilet ücretiniz: " +m);
+        }
+
+
+        switch(a){
+            case 1:
+            System.out.println("dönüşünüz tek yönlüdür");break;
+            case 2:
+                x=top*80/100; //%20 indirim uygulandı
+            System.out.println("Biletiniz gidiş-dönüşlü olduğundan %20 indirim uygulandı."+"\n"+x);
+
+        }
+
+}}
