@@ -1,0 +1,48 @@
+package org.example;
+
+import java.util.Scanner;
+
+import static com.sun.tools.doclint.Entity.gt;
+
+public class Main {
+    public static void main(String[] args) {
+        int a,b,c,d,e,f,h,t;
+        float g;
+        Scanner okuyucu =new Scanner(System.in);
+        System.out.println("Matematik_notu:");
+        a=okuyucu.nextInt();
+        boolean sonuc;
+        System.out.println(sonuc&gt;=60 ? "Sınıfı Geçti" : "Sınıfta Kaldı");
+        System.out.println("Fizik_notu:");
+        b=okuyucu.nextInt();
+        System.out.println(sonuc&gt;=60 ? "Sınıfı Geçti" : "Sınıfta Kaldı");
+        System.out.println("Müzik_notu");
+        c=okuyucu.nextInt();
+        System.out.println(sonuc&gt;=60 ? "Sınıfı Geçti" : "Sınıfta Kaldı");
+        System.out.println("Kimya_notu:");
+        d=okuyucu.nextInt();
+        System.out.println(sonuc&gt;=60 ? "Sınıfı Geçti" : "Sınıfta Kaldı");
+        System.out.println("Türkçe_notu:");
+        e=okuyucu.nextInt();
+        System.out.println(sonuc&gt;=60 ? "Sınıfı Geçti" : "Sınıfta Kaldı");
+        System.out.println("Tarih_notu:");
+        f=okuyucu.nextInt();
+        System.out.println(sonuc&gt;=60 ? "Sınıfı Geçti" : "Sınıfta Kaldı");
+        g=(a+b+c+d+e+f)/6;
+        System.out.println(g);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+}
