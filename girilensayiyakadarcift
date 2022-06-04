@@ -1,0 +1,21 @@
+package org.example;
+
+import java.util.Scanner;
+//Girilen sayıya kadar olan çift sayılar
+public class Main {
+    public static void main(String[] args) {
+        int x;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Sayı giriniz: ");
+        x=input.nextInt();
+
+        for(int i=0;i<=x;i++){
+            if(i%2==0)
+                System.out.println(i);
+            
+        }
+
+
+
+
+}}
