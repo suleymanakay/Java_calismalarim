@@ -1,0 +1,47 @@
+package org.example;
+
+import java.util.Scanner;
+
+/*Dersler : Matematik, Fizik, Türkçe, Kimya, Müzik
+
+Geçme Notu : 55
+
+Ödev
+Eğer girilen ders notları 0 veya 100 arasında değil ise ortalamaya katılmasın.
+
+ */
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner scanner=new Scanner(System.in);
+        int x,y,z,a,b,c=0;
+        System.out.print("Matematik notu giriniz: ");
+        x=scanner.nextInt();
+        System.out.print("Fizik notu giriniz: ");
+        y=scanner.nextInt();
+        System.out.print("Türkçe notu giriniz:  ");
+        z=scanner.nextInt();
+        System.out.print("Kimya notu giriniz:  ");
+        a=scanner.nextInt();
+        System.out.print("Müzik notu giriniz:  ");
+        b=scanner.nextInt();
+
+        if(x>=100 && x>=0) {
+            c = (y + z + a + b) / 4;
+            System.out.print("Matematik notu geçersiz. \n" +x+"  Notu ortalamaya  katılmadı!\n"+
+                    "Not ortalamanız" + c);
+        }
+        else {
+            c = (x + y + z + a + b) / 5;
+            System.out.println("Not ortalamanız: "+"."+ c);
+            if(c<55){
+                System.out.println("kaldınız");
+            }
+            else
+                System.out.println("getiniz.");
+        }
+
+
+
+    }
+}
