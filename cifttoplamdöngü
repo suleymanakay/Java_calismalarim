@@ -1,0 +1,32 @@
+package org.example;
+
+import java.util.Scanner;
+/*Java döngüler ile negatif bir değer girilene kadar kullanıcıdan girişleri kabul eden
+ ve girilen değerlerden tek sayıları toplayıp ekrana basan programı yazıyoruz.
+
+Ödev
+Java döngüler ile tek bir sayı girilene kadar kullanıcıdan girişleri kabul eden
+ ve girilen değerlerden çift ve 4'ün katları olan sayıları toplayıp ekrana basan programı yazıyoruz.
+
+ */
+public class Main {
+    public static void main(String[] args) {
+        int x,y=0;
+        Scanner input = new Scanner(System.in);
+        for (int i = 0; ; i++) {
+            System.out.print("Lütfen sayı giriniz:");
+            x=input.nextInt();
+            if(x%2==0 && x%4==0) {
+                y += x;
+                System.out.println("Toplam=" + y+"\nDöngüen çıkmak için tek sayı giriniz.");
+            }
+            else if(x%2==1) {
+                System.out.println("Döngüden çıkılıyor...");
+                break;
+            }
+            else
+                System.out.println("Geçersiz sayı girdiniz lütfen tekrar deneyin.");
+        }
+
+
+}}
