@@ -1,0 +1,40 @@
+package org.example;
+
+import java.util.Scanner;
+/*
+Ödev
+N elemanlı bir kümenin elemanları ile oluşturulacak r elemanlı farklı grupların sayısı n’in r’li kombinasyonu olarak adlandırılır. N’in r’li kombinasyonu C(n,r) şeklinde gösterilir.
+
+Java ile kombinasyon hesaplayan program yazınız.
+
+Kombinasyon formülü
+C(n,r) = n! / (r! * (n-r)!)
+ */
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n,m,a=1,b=1,c=1,p;
+        System.out.print("Lütfen C(n,r)`nin 'n' değerini giriniz: ");
+        n=input.nextInt();
+        System.out.print("Lütfen C(n,r)`nin 'r' değerini giriniz: ");
+        m=input.nextInt();
+        System.out.println("n nin faktöriyeli: ");
+        for (int i = 1; i <= n; i++) {
+            a*=i;
+            System.out.println(a);
+        }
+        System.out.println("r nin faktöriyeli: ");
+        for (int k = 1; k <= m; k++) {
+            b*=k;
+            System.out.println(b);
+        }
+        System.out.println("(n-r)! sonucu:");
+        for (int t = 1; t <= (n-m); t++) {
+            c*=t;
+            System.out.println(c);
+        }
+        System.out.print("C(n,r)= ");
+        p=a/(b*c);
+        System.out.print(p);
+    }
+}
