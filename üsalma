@@ -1,0 +1,42 @@
+package org.example;
+
+import java.util.Scanner;
+/*
+Java ile kullanıcının girdiği değerler ile üslü sayı hesaplayan programı yazıyoruz.
+
+Ödev
+Java ile kullanıcının girdiği değerler ile üslü sayı hesaplayan programı "For Döngüsü" kullanarak yapınız.
+ */
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int x,y,z;
+
+        for (int i = 1; ; i++) {
+            int a,b=1,o=1;
+            System.out.print("Üssü alınacak Sayı giriniz: ");
+            x=input.nextInt();
+            System.out.println("Sayının kacıncı üssünü almak istersiniz: ");
+            y=input.nextInt();
+            while(o<=y){
+                b*=x;
+                o++;
+            }
+            System.out.println("sonuc:"+b);
+            System.out.println("Devam etmek için 1 e basınız \nDöngüyü bitirmek için 2 basınız");
+            z=input.nextInt();
+
+
+
+            if(z==1)
+                System.out.println("Devam ediliyor...");
+            else if(z==2) {
+                System.out.println("döngüden çıkılıyor.");
+                break;
+            }
+            else
+                System.out.println("Yanlış değer girdiniz döngü devam edicek...");
+        }
+
+    }
+}
