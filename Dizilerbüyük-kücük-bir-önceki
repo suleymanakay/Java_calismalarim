@@ -1,0 +1,36 @@
+package org.example;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+/*
+Dizideki sayıların harmonik ortalamasını hesaplayan programı yazınız.
+
+
+ */
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        int[] list = {56, 34, 1, 8, 101, -2, -33};
+
+        int min = list[0];
+        int max = list[0];
+        System.out.println(Arrays.toString(list));
+        System.out.print("Girilecek sayi: ");
+        int n =scanner.nextInt();
+        Arrays.sort(list);
+
+        for (int i : list) {
+            if (i < n) {
+                min = i;
+            }
+            if (i > n) {
+                max = i;
+                break;
+            }
+        }
+
+        System.out.println("Minimum Değer den bir önceki minimum: " + min);
+        System.out.print("Maximum Değer den bir önceki maximum: " + max);
+    }
+}
